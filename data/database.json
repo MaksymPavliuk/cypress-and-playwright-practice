@@ -3,7 +3,7 @@
     {
       "id": "t45AiwidW",
       "uuid": "6383f84e-b511-44c5-a835-3ece1d781fa8",
-      "firstName": "willwilliams",
+      "firstName": "williams",
       "lastName": "Johns",
       "username": "Katharina_Bernier",
       "password": "$2a$10$5PXHGtcsckWtAprT5/JmluhR13f16BL8SIGhvAKNP.Dhxkt69FfzW",
@@ -129,6 +129,17 @@
       "balance": 0,
       "createdAt": "2025-05-15T06:52:00.638Z",
       "modifiedAt": "2025-05-15T06:52:00.638Z"
+    },
+    {
+      "id": "ADB4X4itZ",
+      "uuid": "ee95c5e8-e816-4b9d-a041-bdc12dc733e6",
+      "firstName": "newFirstName",
+      "lastName": "newLastName",
+      "username": "newUser_wow",
+      "password": "$2a$10$vQ1cFUgI6Y3pCkpJ33N/0uzGUnytKekc7E3sNdYAMlI7zja7bSMsq",
+      "balance": 0,
+      "createdAt": "2025-05-15T08:50:25.212Z",
+      "modifiedAt": "2025-05-15T08:50:25.212Z"
     }
   ],
   "contacts": [

@@ -17,7 +17,13 @@ describe("Home page tests.", () => {
     signInPage = new SignInPage();
     cy.visit("/");
   });
-
+  it("should see transaction details", () => {
+    signInPage
+      .loginWithValidUser(user.username, user.password)
+      .clickPersonalTransactions()
+      .clickOnTransaction()
+      .verifyTransactionDetailsAreDisplayed();
+  });
   it("should update account info", () => {
     let newFirstName = "williams";
     signInPage
@@ -26,14 +32,6 @@ describe("Home page tests.", () => {
       .typeNewFirstName(newFirstName)
       .clickSaveButton()
       .verifyTheNewNameIsDisplayed(newFirstName);
-  });
-
-  it("should see transaction details", () => {
-    signInPage
-      .loginWithValidUser(user.username, user.password)
-      .clickPersonalTransactions()
-      .clickOnTransaction()
-      .verifyTransactionDetailsAreDisplayed();
   });
 
   it("should see all personal transactions", () => {

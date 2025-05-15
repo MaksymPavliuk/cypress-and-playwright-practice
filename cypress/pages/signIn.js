@@ -21,7 +21,9 @@ class SignInPage {
   loginWithValidUser(username, password) {
     this.typeUsername(username);
     this.typePassword(password);
-    return this.clickSubmitButton();
+    let homePage = this.clickSubmitButton();
+    cy.debug();
+    return homePage;
   }
 
   visit() {

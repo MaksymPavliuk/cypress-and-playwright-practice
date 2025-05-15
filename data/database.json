@@ -107,6 +107,28 @@
       "balance": 0,
       "createdAt": "2025-05-15T06:17:46.262Z",
       "modifiedAt": "2025-05-15T06:17:46.262Z"
+    },
+    {
+      "id": "mEHvWIzhv",
+      "uuid": "20f1f89a-f70a-4c25-a4f5-36d020a36ed5",
+      "firstName": "newFirstName",
+      "lastName": "newLastName",
+      "username": "newUser_wow",
+      "password": "$2a$10$JxvJSsChQB59mAKF0Lwt8eFty540Tpr6dfOO5GkmoSPhtLIYZJXWi",
+      "balance": 0,
+      "createdAt": "2025-05-15T06:31:56.777Z",
+      "modifiedAt": "2025-05-15T06:31:56.777Z"
+    },
+    {
+      "id": "4TpTnzFNx",
+      "uuid": "01db7abe-d62c-4572-acb1-19b148dc34a7",
+      "firstName": "newFirstName",
+      "lastName": "newLastName",
+      "username": "newUser_wow",
+      "password": "$2a$10$0cfcGQP3RLZVuIFExcu9DOK66cwqkZPHr30Y4Yv0UOfJ/o0YTIXse",
+      "balance": 0,
+      "createdAt": "2025-05-15T06:52:00.638Z",
+      "modifiedAt": "2025-05-15T06:52:00.638Z"
     }
   ],
   "contacts": [
@@ -286,6 +308,17 @@
       "isDeleted": false,
       "createdAt": "2019-09-30T14:20:07.043Z",
       "modifiedAt": "2020-05-21T22:40:28.910Z"
+    },
+    {
+      "id": "Oh3G4zn7S",
+      "uuid": "de0087fc-4121-483c-a9ab-136446a4689f",
+      "userId": "t45AiwidW",
+      "bankName": "wwwwwwe",
+      "accountNumber": "123123123",
+      "routingNumber": "123123123",
+      "isDeleted": false,
+      "createdAt": "2025-05-15T06:34:12.551Z",
+      "modifiedAt": "2025-05-15T06:34:12.551Z"
     }
   ],
   "transactions": [

@@ -1,10 +1,16 @@
 {
-  "testuser": {
+  "testUser": {
     "username": "Katharina_Bernier",
     "password": "s3cret"
   },
-  "invaliduser": {
+  "invalidUser": {
     "username": "invalid_username",
     "password": "invalid_password"
+  },
+  "newUser": {
+    "firstName": "newFirstName",
+    "lastName": "newLastName",
+    "username": "newUser_wow",
+    "password": "sameOldMistakes"
   }
 }

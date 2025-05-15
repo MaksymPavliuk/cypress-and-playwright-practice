@@ -85,6 +85,28 @@
       "balance": 0,
       "createdAt": "2025-05-15T05:40:10.131Z",
       "modifiedAt": "2025-05-15T05:40:10.131Z"
+    },
+    {
+      "id": "rEKlobSBy",
+      "uuid": "ae6ecb46-f4f3-41a9-863c-238d8cef66ea",
+      "firstName": "newFirstName",
+      "lastName": "newLastName",
+      "username": "newUser_wow",
+      "password": "$2a$10$2EnPiqgCPDrxo3Q.3P25uu5kdAqQxW5OtYZwTYWPfN0JcWmmYvrI6",
+      "balance": 0,
+      "createdAt": "2025-05-15T06:12:24.028Z",
+      "modifiedAt": "2025-05-15T06:12:24.028Z"
+    },
+    {
+      "id": "DWR_09rGS",
+      "uuid": "cbcafc79-90f2-47fa-9f87-460df3cfdf64",
+      "firstName": "newFirstName",
+      "lastName": "newLastName",
+      "username": "newUser_wow",
+      "password": "$2a$10$ZFMs3UOiRlt6HyOye9TKm.WFpDgNUeY56OdOf4UdcYhPy/ufN19eK",
+      "balance": 0,
+      "createdAt": "2025-05-15T06:17:46.262Z",
+      "modifiedAt": "2025-05-15T06:17:46.262Z"
     }
   ],
   "contacts": [

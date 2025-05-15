@@ -18,6 +18,12 @@ class SignInPage {
     return '[data-test="signin-submit"]';
   }
 
+  loginWithValidUser(username, password) {
+    this.typeUsername(username);
+    this.typePassword(password);
+    return this.clickSubmitButton();
+  }
+
   visit() {
     cy.visit("/signin");
     return this;

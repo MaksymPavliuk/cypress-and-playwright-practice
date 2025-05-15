@@ -17,6 +17,24 @@ class HomePage {
   get allTransactionsList() {
     return '[data-test="transaction-list"]';
   }
+  get transactionDetailsHeaders() {
+    return ".MuiListItem-alignItemsFlexStart";
+  }
+  get detailsHeader() {
+    return '[data-test="transaction-detail-header"]';
+  }
+  get firstNameField() {
+    return "#user-settings-firstName-input";
+  }
+  get saveNewAccountDetailsButton() {
+    return '[data-test="user-settings-submit"]';
+  }
+  get fullUserNameSidebar() {
+    return '[data-test="sidenav-user-full-name"]';
+  }
+  get saveButton() {
+    return '[data-test="user-settings-submit"]';
+  }
 
   verifyBalanceIsDisplayed() {
     cy.get(this.sidebarAccountBalance).should("be.visible");
@@ -42,6 +60,29 @@ class HomePage {
 
   verifyTransactionsAreVisible() {
     cy.get(this.allTransactionsList).should("be.visible");
+  }
+
+  clickOnTransaction() {
+    cy.get(this.transactionDetailsHeaders).first().click();
+    return this;
+  }
+
+  verifyTransactionDetailsAreDisplayed() {
+    cy.get(this.detailsHeader).should("be.visible");
+  }
+
+  typeNewFirstName(firstName) {
+    cy.get(this.firstNameField).type(firstName);
+    return this;
+  }
+
+  clickSaveButton() {
+    cy.get(this.saveButton).click();
+    return this;
+  }
+
+  verifyTheNewNameIsDisplayed(firstName) {
+    cy.get(this.fullUserNameSidebar).should("contain.text", firstName);
   }
 }
 module.exports = HomePage;

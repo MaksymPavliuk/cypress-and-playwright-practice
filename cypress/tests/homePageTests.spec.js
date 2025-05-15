@@ -18,6 +18,24 @@ describe("Home page tests.", () => {
     cy.visit("/");
   });
 
+  it("should update account info", () => {
+    let newFirstName = "williams";
+    signInPage
+      .loginWithValidUser(user.username, user.password)
+      .clickAccountDetails()
+      .typeNewFirstName(newFirstName)
+      .clickSaveButton()
+      .verifyTheNewNameIsDisplayed(newFirstName);
+  });
+
+  it("should see transaction details", () => {
+    signInPage
+      .loginWithValidUser(user.username, user.password)
+      .clickPersonalTransactions()
+      .clickOnTransaction()
+      .verifyTransactionDetailsAreDisplayed();
+  });
+
   it("should see all personal transactions", () => {
     signInPage
       .loginWithValidUser(user.username, user.password)

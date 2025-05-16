@@ -5,6 +5,8 @@ describe("Home page tests.", () => {
   let users; // all users
   let user; // current used
 
+  let modifiedAccountName;
+  let nameSalt;
   let bankAccounts;
   let bankAccount;
 
@@ -15,11 +17,14 @@ describe("Home page tests.", () => {
     cy.fixture("bankAccountDetails").then((data) => {
       bankAccounts = data;
     });
+
+    nameSalt = Date.now().toString().slice(-5);
   });
 
   beforeEach(() => {
     user = users.testUser;
     bankAccount = bankAccounts.newAccount;
+    modifiedAccountName = bankAccount.name + nameSalt;
 
     signInPage = new SignInPage();
     cy.visit("/");
@@ -30,11 +35,19 @@ describe("Home page tests.", () => {
       .loginWithValidUser(user.username, user.password)
       .clickOnBankAccounts()
       .clickCreateAccount()
-      .typeAccountName(bankAccount.name)
+      .typeAccountName(modifiedAccountName)
       .typeRoutingNumber(bankAccount.routingNumber)
       .typeAccountNumber(bankAccount.accountNumber)
       .clickSaveAccountButton()
-      .verifyNewAccountWasCreatedByName(bankAccount.name);
+      .verifyNewAccountWasCreatedByName(modifiedAccountName);
+  });
+
+  it("should delete the createed account", () => {
+    signInPage
+      .loginWithValidUser(user.username, user.password)
+      .clickOnBankAccounts()
+      .deleteAccountByName(modifiedAccountName)
+      .verifyAccountWasDeletedByName(modifiedAccountName);
   });
 
   it("should see transaction details", () => {

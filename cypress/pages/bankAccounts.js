@@ -6,7 +6,13 @@ class BankAccountsPage {
     return '[data-test="bankaccount-delete"]';
   }
   get accountNames() {
-    return ".MuiTypography-root.MuiTypography-body1";
+    return ".MuiTypography-root.MuiTypography-body1.MuiTypography-gutterBottom";
+  }
+  get commonWrapperForNamesAndButtons() {
+    return ".MuiGrid-container.MuiGrid-align-items-xs-flex-start";
+  }
+  get wrapperForButton() {
+    return ".MuiGrid-root.MuiGrid-item";
   }
   get accountNameInputField() {
     return "#bankaccount-bankName-input";
@@ -47,23 +53,21 @@ class BankAccountsPage {
   }
 
   verifyNewAccountWasCreatedByName(name) {
-    cy.get(this.accountNames)
-      .filter((item) => item.contains(name))
-      .should("have.length", 1);
+    cy.contains(this.accountNames, name).should("exist");
   }
 
   deleteAccountByName(name) {
-    cy.get(this.accountNames)
-      .findIndex((item) => item.contains(name))
-      .as("index");
-    cy.get(this.deleteAccountButtons).eq(cy.get("@index")).click();
+    cy.contains(this.accountNames, name)
+      .parents(this.commonWrapperForNamesAndButtons)
+      .find(this.wrapperForButton)
+      .find(this.deleteAccountButtons)
+      .click();
+
     return this;
   }
 
   verifyAccountWasDeletedByName(name) {
-    cy.get(this.accountNames)
-      .filter((item) => item.contains(name))
-      .should("have.length", 0);
+    cy.get(this.accountNames).filter(`:contains("${name}")`).should("contain.text", "Deleted");
   }
 }
 

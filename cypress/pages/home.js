@@ -1,5 +1,6 @@
 const AccountDetailsPage = require("../pages/accountDetails");
 const TransactionsPage = require("../pages/transactions");
+const BankAccountsPage = require("../pages/bankAccounts");
 
 class HomePage {
   // *** <- *** <- *** <- GETTERS(CODE: 32) -> *** -> *** -> ***
@@ -37,7 +38,10 @@ class HomePage {
     return new TransactionsPage();
   }
 
-  clickOnBankAccounts() {}
+  clickOnBankAccounts() {
+    cy.get(this.bankAccountsButton).click();
+    return new BankAccountsPage();
+  }
 }
 
 // *** <- *** <- *** <- EXPORTS(CODE: 34) -> *** -> *** -> ***

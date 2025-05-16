@@ -5,18 +5,38 @@ describe("Home page tests.", () => {
   let users; // all users
   let user; // current used
 
+  let bankAccounts;
+  let bankAccount;
+
   before(() => {
     cy.fixture("users").then((data) => {
       users = data;
+    });
+    cy.fixture("bankAccountDetails").then((data) => {
+      bankAccounts = data;
     });
   });
 
   beforeEach(() => {
     user = users.testUser;
+    bankAccount = bankAccounts.newAccount;
 
     signInPage = new SignInPage();
     cy.visit("/");
   });
+
+  it("should create new bank account", () => {
+    signInPage
+      .loginWithValidUser(user.username, user.password)
+      .clickOnBankAccounts()
+      .clickCreateAccount()
+      .typeAccountName(bankAccount.name)
+      .typeRoutingNumber(bankAccount.routingNumber)
+      .typeAccountNumber(bankAccount.accountNumber)
+      .clickSaveAccountButton()
+      .verifyNewAccountWasCreatedByName(bankAccount.name);
+  });
+
   it("should see transaction details", () => {
     signInPage
       .loginWithValidUser(user.username, user.password)
@@ -24,6 +44,7 @@ describe("Home page tests.", () => {
       .clickOnTransaction()
       .verifyTransactionDetailsAreDisplayed();
   });
+
   it("should update account info", () => {
     let newFirstName = "williams";
     signInPage

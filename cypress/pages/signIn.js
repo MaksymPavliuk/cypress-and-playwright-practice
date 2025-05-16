@@ -5,15 +5,12 @@ class SignInPage {
   get usernameInputField() {
     return "#username";
   }
-
   get passwordInputField() {
     return "#password";
   }
-
   get registerUserButton() {
     return '[data-test="signup"]';
   }
-
   get submitButton() {
     return '[data-test="signin-submit"]';
   }
@@ -22,7 +19,6 @@ class SignInPage {
     this.typeUsername(username);
     this.typePassword(password);
     let homePage = this.clickSubmitButton();
-    cy.debug();
     return homePage;
   }
 

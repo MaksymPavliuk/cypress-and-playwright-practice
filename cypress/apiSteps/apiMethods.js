@@ -48,6 +48,13 @@ class ApiMethods {
       expect(response.status).to.eq(200);
     });
   }
+
+  getAllUsers() {
+    cy.request("GET", `${Cypress.env("apiUrl")}/users`).then((response) => {
+      expect(response.status).to.eq(200);
+      expect(response.body.results[0]).to.not.be.undefined;
+    });
+  }
 }
 
 module.exports = ApiMethods;

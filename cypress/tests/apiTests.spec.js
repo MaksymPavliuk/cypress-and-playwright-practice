@@ -42,4 +42,8 @@ describe("API tests", () => {
     const content = "example comment";
     apiMethods.postCommentByTransactionIdAndContent(transaction.testTransactionId, content);
   });
+
+  it("should get all users", () => {
+    apiMethods.getAllUsers();
+  });
 });

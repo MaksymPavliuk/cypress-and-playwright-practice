@@ -15,9 +15,16 @@ describe("API tests", () => {
 
   beforeEach(() => {
     user = users.testUser;
+    apiMethods.signIn(user.username, user.password);
   });
 
-  it("should get a list of bankAccounts", () => {
-    apiMethods.signIn(user.username, user.password).getBankAccounts(user.routingNumber);
+  it("should get a list of bankAccounts from the valid logged In user", () => {
+    apiMethods.getBankAccounts(user.bankAccountId);
+  });
+
+  it("should delete a bank account by id", () => {
+    apiMethods
+      .deleteBankAccountById(user.bankAccountId)
+      .verifyAccountIsDeletedById(user.bankAccountId);
   });
 });

@@ -3,15 +3,35 @@ class ApiMethods {
     cy.loginByApi(username, password).then((response) => {
       expect(response.status).to.eq(200);
     });
+  }
+
+  getBankAccounts(bankAccountId) {
+    cy.request("GET", `${Cypress.env("apiUrl")}/bankAccounts`).then((response) => {
+      expect(response.status).to.eq(200);
+      expect(response.body.results[0]).to.have.property("id", bankAccountId);
+    });
     return this;
   }
 
-  getBankAccounts(routingNumber) {
+  deleteBankAccountById(bankAccountId) {
+    cy.request("DELETE", `${Cypress.env("apiUrl")}/bankAccounts/${bankAccountId}`).then(
+      (response) => {
+        expect(response.status).to.eq(200);
+      }
+    );
+    return this;
+  }
+
+  verifyAccountIsDeletedById(bankAccountId) {
     cy.request("GET", `${Cypress.env("apiUrl")}/bankAccounts`).then((response) => {
       expect(response.status).to.eq(200);
-      expect(response.body.results[0]).to.have.property("routingNumber", routingNumber);
+
+      const bankAccounts = response.body.results;
+      const account = bankAccounts.find((acc) => acc.id === bankAccountId);
+
+      expect(account).to.not.be.undefined;
+      expect(account).to.have.property("isDeleted", true);
     });
-    return this;
   }
 }
 

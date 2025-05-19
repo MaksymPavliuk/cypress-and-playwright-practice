@@ -2,7 +2,7 @@
   "testUser": {
     "username": "Katharina_Bernier",
     "password": "s3cret",
-    "routingNumber": "851823229"
+    "bankAccountId": "RskoB7r4Bic"
   },
   "invalidUser": {
     "username": "invalid_username",

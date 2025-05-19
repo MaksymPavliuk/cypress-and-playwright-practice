@@ -40,6 +40,14 @@ class ApiMethods {
       expect(response.body.user).to.not.be.undefined;
     });
   }
+
+  postCommentByTransactionIdAndContent(transactionId, content) {
+    cy.request("POST", `${Cypress.env("apiUrl")}/comments/${transactionId}`, {
+      content: content,
+    }).then((response) => {
+      expect(response.status).to.eq(200);
+    });
+  }
 }
 
 module.exports = ApiMethods;

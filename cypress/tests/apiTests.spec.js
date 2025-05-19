@@ -4,10 +4,15 @@ describe("API tests", () => {
   let apiMethods;
   let users;
   let user;
+  let publicTransactions;
+  let transaction;
 
   before(() => {
     cy.fixture("users").then((data) => {
       users = data;
+    });
+    cy.fixture("public-transactions").then((data) => {
+      publicTransactions = data;
     });
 
     apiMethods = new ApiMethods();
@@ -15,6 +20,7 @@ describe("API tests", () => {
 
   beforeEach(() => {
     user = users.testUser;
+    transaction = publicTransactions;
     apiMethods.signIn(user.username, user.password);
   });
 
@@ -30,5 +36,10 @@ describe("API tests", () => {
 
   it("should get user info by username", () => {
     apiMethods.getUserByUsername(user.username);
+  });
+
+  it("should post a comment by transaction id", () => {
+    const content = "example comment";
+    apiMethods.postCommentByTransactionIdAndContent(transaction.testTransactionId, content);
   });
 });

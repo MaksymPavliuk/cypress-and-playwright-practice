@@ -27,4 +27,8 @@ describe("API tests", () => {
       .deleteBankAccountById(user.bankAccountId)
       .verifyAccountIsDeletedById(user.bankAccountId);
   });
+
+  it("should get user info by username", () => {
+    apiMethods.getUserByUsername(user.username);
+  });
 });

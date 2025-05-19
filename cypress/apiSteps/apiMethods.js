@@ -33,6 +33,13 @@ class ApiMethods {
       expect(account).to.have.property("isDeleted", true);
     });
   }
+
+  getUserByUsername(username) {
+    cy.request("GET", `${Cypress.env("apiUrl")}/users/profile/${username}`).then((response) => {
+      expect(response.status).to.eq(200);
+      expect(response.body.user).to.not.be.undefined;
+    });
+  }
 }
 
 module.exports = ApiMethods;

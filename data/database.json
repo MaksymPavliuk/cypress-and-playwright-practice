@@ -3,7 +3,7 @@
     {
       "id": "t45AiwidW",
       "uuid": "6383f84e-b511-44c5-a835-3ece1d781fa8",
-      "firstName": "williams",
+      "firstName": "Edgar",
       "lastName": "Johns",
       "username": "Katharina_Bernier",
       "password": "$2a$10$5PXHGtcsckWtAprT5/JmluhR13f16BL8SIGhvAKNP.Dhxkt69FfzW",
@@ -253,72 +253,6 @@
       "isDeleted": false,
       "createdAt": "2019-09-30T14:20:07.043Z",
       "modifiedAt": "2020-05-21T22:40:28.910Z"
-    },
-    {
-      "id": "0k1gubaZ6",
-      "uuid": "bd2aefe1-a22e-48af-af90-280b6f9ec80a",
-      "userId": "t45AiwidW",
-      "bankName": "myName44376",
-      "accountNumber": "123456123",
-      "routingNumber": "123412345",
-      "isDeleted": true,
-      "createdAt": "2025-05-16T08:02:33.076Z",
-      "modifiedAt": "2025-05-16T08:02:33.076Z"
-    },
-    {
-      "id": "Il6cxjiJP",
-      "uuid": "47c320eb-572c-478c-b69d-9fc10e952b85",
-      "userId": "t45AiwidW",
-      "bankName": "myName43514",
-      "accountNumber": "123456123",
-      "routingNumber": "123412345",
-      "isDeleted": false,
-      "createdAt": "2025-05-16T08:05:51.572Z",
-      "modifiedAt": "2025-05-16T08:05:51.572Z"
-    },
-    {
-      "id": "zGUafXpQz",
-      "uuid": "c3897c00-362f-4899-ab8d-a387c471131f",
-      "userId": "t45AiwidW",
-      "bankName": "myName04261",
-      "accountNumber": "123456123",
-      "routingNumber": "123412345",
-      "isDeleted": false,
-      "createdAt": "2025-05-16T08:13:32.551Z",
-      "modifiedAt": "2025-05-16T08:13:32.551Z"
-    },
-    {
-      "id": "VciNXJ29S",
-      "uuid": "6ff0c707-21af-4730-97b8-f6ca12aa7281",
-      "userId": "t45AiwidW",
-      "bankName": "myName36498",
-      "accountNumber": "123456123",
-      "routingNumber": "123412345",
-      "isDeleted": false,
-      "createdAt": "2025-05-16T08:19:04.636Z",
-      "modifiedAt": "2025-05-16T08:19:04.636Z"
-    },
-    {
-      "id": "QhgTJV4_F",
-      "uuid": "fd89bc78-06da-4899-8317-49a8042d1f20",
-      "userId": "t45AiwidW",
-      "bankName": "myName36704",
-      "accountNumber": "123456123",
-      "routingNumber": "123412345",
-      "isDeleted": true,
-      "createdAt": "2025-05-16T08:20:44.732Z",
-      "modifiedAt": "2025-05-16T08:20:44.732Z"
-    },
-    {
-      "id": "dYJWUrFnu",
-      "uuid": "df2069ea-217d-4967-935a-6ef150cf9af3",
-      "userId": "t45AiwidW",
-      "bankName": "myName05437",
-      "accountNumber": "123456123",
-      "routingNumber": "123412345",
-      "isDeleted": true,
-      "createdAt": "2025-05-16T08:23:33.343Z",
-      "modifiedAt": "2025-05-16T08:23:33.343Z"
     }
   ],
   "transactions": [

@@ -1,7 +1,8 @@
 {
   "testUser": {
     "username": "Katharina_Bernier",
-    "password": "s3cret"
+    "password": "s3cret",
+    "routingNumber": "851823229"
   },
   "invalidUser": {
     "username": "invalid_username",
